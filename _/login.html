@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="rgb(0 122 255)">
+    <link rel="manifest" href="./manifest.json">
+    <title>Website ka naam</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./logo192.png">
+    <meta name="description" content="Template Tailwind CSS - 02 cloned" />
+    <meta name="keywords" content="" />
+    <link href="./dist/css/tailwind.min.css" rel="stylesheet">
+    <link href="./dist/css/fontawesome-all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="./dist/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="login.css">
+
+
+    <style>
+        h2, h3, h4, p {
+    margin: 0;
+    display: inline-block;
+    font-size: 25px;
+    text-align: left;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    gap: 30px;
+    overflow-y: scroll;
+    scrollbar-color: rgb(174, 174, 174) transparent;
+}
+
+.login-neu {
+    border: 2px solid rgb(84, 125, 249);
+    overflow-y: scroll;
+    border-radius: 10px;
+    box-shadow: 8px 8px 100px rgb(212, 212, 212);
+    margin-top: 50px;
+    width: 40vw !important;
+}
+
+.login-container {
+    height: 80vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: -530px;
+}
+
+form input[type='text'],
+form input[type='email'],
+form input[type='date'],
+form input[type='password'],
+form input[type='number'],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    height: 50px;
+    border: 2px solid #9a9a9a;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all .3s ease;
+    cursor: pointer;
+    padding: 10px;
+}
+textarea {
+    height: 200px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9a9a9a;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    background-color: white;
+    cursor: pointer;
+}
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    position: relative;
+}
+
+.login-name,
+.login-address,
+.login-cont-dob, .login-button {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.login-addr section {
+    gap: 20px;
+}
+
+.login-header {
+    padding: 20px;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    width: 95%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+
+.login-header h1 {
+    font-weight: 600;
+}
+
+section .login-div {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+label {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.login-guideline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-guideline label {
+    width: auto;
+}
+
+@media screen and (max-width:800px) {
+    .login-name,
+    .login-address,
+    .login-cont-dob,
+    .login-article {
+        flex-direction: column;
+    }
+}
+
+.login-file {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.login-file input {
+    position: relative;
+    top: -5px;
+}
+
+select {
+    border: 0.5px solid rgb(215, 215, 215);
+    width: 400px !important;
+    height: 70px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px !important;
+}
+
+.login-dropdown {
+    justify-content: space-between;
+}
+
+.login-butto {
+    width: 40%;
+    height: 50px !important;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgb(0, 68, 255); */
+    /* background: rgb(0, 68, 255); */
+    font-size: 25px !important;
+    position: relative;
+    right: -205px;
+    color: white;
+    border-radius: 10px;
+}
+
+.login-butto:hover {
+    background-color: white;
+    color: rgb(0, 68, 255);
+}
+
+.login-already {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.login-already a {
+    text-decoration: none;
+    color: orangered;
+    font-size: 25px;
+}
+
+.login-forgotPass{
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    position: relative;
+    top: -15px;
+}
+
+.login-forgotPass a{
+    text-decoration: none;
+}
+
+.login-thru_social_icons p{
+    color: rgb(163, 163, 163);
+    font-size: 20px !important;
+}
+
+.eye_icon{
+    width:30px !important;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 62px;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <div class="ezy__nav2 dark py-6 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative">
+        <nav>
+            <div class="container px-4">
+                <div class="flex justify-between items-center">
+                    <a class="font-black text-3xl" href="#"> Smart City </a>
+                    <button class="block lg:hidden cursor-pointer h-10 z-20" type="button" id="hamburger">
+                        <div class="h-0.5 w-7 bg-black dark:bg-white -translate-y-2"></div>
+                        <div class="h-0.5 w-7 bg-black dark:bg-white"></div>
+                        <div class="h-0.5 w-7 bg-black dark:bg-white translate-y-2"></div>
+                    </button>
+                    <ul class="flex flex-col lg:flex-row justify-center items-center text-3xl gap-6 lg:text-base lg:gap-2 absolute h-screen w-screen top-0 left-full lg:left-0 lg:relative lg:h-auto lg:w-auto bg-white dark:bg-[#0b1727] lg:bg-transparent"
+                        id="navbar">
+                        <li class="">
+                            <a class="px-4 opacity-50" href="index.html">Home</a>
+                        </li>
+                        <li class="">
+                            <a class="px-4 opacity-100 hover:opacity-100" href="services.html">Services</a>
+                        </li>
+                        <li class="">
+                            <a class="px-4 opacity-50 hover:opacity-100" href="news.html">News/Events</a>
+                        </li>
+                        <li class="">
+                            <a class="px-4 opacity-50 hover:opacity-100" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="">
+                            <a class="px-4 opacity-50 hover:opacity-100" href="maps.html">Maps🌏</a>
+                        </li>
+                        <li>
+                            <button
+                                class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-1.5 px-4 rounded">Sign
+                                Up
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded">Log
+                                In</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section class="ezy__footer dark py-12 bg-gray-800 text-white">
+
+        <div class="login-container login-neu" style="background-color: #1a1a1a; border: 2px solid #333; padding: 30px; color: #ffffff; position: relative; right: -450px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);">
+            <div class="login-header">
+                <i class="ri-book-line ri-4x" style="color: #4c8bf5;"></i>
+                <h2 style="color: #ffffff; font-size: 40px;">Login</h2>
+                <i class="ri-book-line ri-4x" style="color: #4c8bf5;"></i>
+            </div>
+            <form>
+                <article>
+                    <section>
+                        <h3 style="color: #bbbbbb;">Username</h3>
+                        <input type="text" name="username" id="username" placeholder="Enter your username" required style="background-color: #2c2c2c; color: #ffffff; border: 1px solid #555; padding: 10px; width: 100%; border-radius: 5px;" />
+                    </section>
+                </article>
+                <article>
+                    <section>
+                        <h3 style="color: #bbbbbb;">Email</h3>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required style="background-color: #2c2c2c; color: #ffffff; border: 1px solid #555; padding: 10px; width: 100%; border-radius: 5px;" />
+                    </section>
+                </article>
+                <article>
+                    <section>
+                        <h3 style="color: #bbbbbb;">Password</h3>
+                        <input type="password" name="password" id="password" placeholder="Enter your password"
+                            required style="background-color: #2c2c2c; color: #ffffff; border: 1px solid #555; padding: 10px; width: 100%; border-radius: 5px;" />
+                    </section>
+                </article>
+                <article class="login-forgotPass" style="color: #4c8bf5;">
+                    <a href="#">Forgot Password?</a>
+                </article>
+                <div class="error text-center" style="color: red;">
+                    <!-- Error message goes here -->
+                </div>
+                <article>
+                    <div class="login-butto flex justify-center" style="position: relative; right: -150px;">
+                        <button type="submit" style="background-color: #4c8bf5; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">Login</button>
+                    </div>
+                </article>
+                <div class="login-already" style="font-size: 15px; color: #bbbbbb;">
+                    <h6>Don't have an account?</h6>
+                    <a href="/Signup" style="font-size: 15px; color: #4c8bf5;">
+                        <h6>Sign up here</h6>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <section class="ezy__footer dark py-12 bg-gray-900 text-white m-0">
+            <div class="container px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <img src="../assets/logoFooter.jpeg" alt="Smart City Logo" class="max-w-full w-40 h-auto mb-6 md:mb-0" />
+                    <p class="text-center mb-6 md:mb-0">© 2024 Citizen Link. All rights reserved.</p>
+                    <ul class="flex gap-6 mb-6 md:mb-0">
+                        <li>
+                            <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between mt-8 text-sm">
+                    <ul class="flex gap-4">
+                        <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Support</a></li>
+                    </ul>
+                    <p class="text-center md:text-right mt-4 md:mt-0">Designed with care by Smart City Team</p>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.tailwindcss.com"></script>
+            <script>
+            tailwind.config = {
+              theme: {
+                container: {
+                  center: true,
+                }
+              }
+            }
+          </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>          
+        </body>
+        </html>

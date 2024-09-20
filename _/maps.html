@@ -14,8 +14,26 @@
             <link href="./dist/css/fontawesome-all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="./dist/css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="styles.css">
     </head>
+    <style>
+        #sosBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: none; /* Hidden initially */
+    padding: 0.5rem;  /* Increased padding for larger button */
+    font-size: 1.5rem;  /* Larger text */
+    width: 80px; /* Button width */
+    height: 80px; /* Button height */
+}
+
+.show-sos {
+    display: block !important; /* Shows the SOS button */
+}
+
+    </style>
 
 <body>
     <div class="ezy__nav2 dark py-6 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative">
@@ -46,20 +64,11 @@
           <li class="">
             <a class="px-4 opacity-100 hover:opacity-100" href="maps.html">Maps🌏</a>
           </li>
-          <li>
-            <button class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-1.5 px-4 rounded">Sign Up
-            </button>
-          </li>
-          <li>
-            <button
-              class="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded">Log In</button>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
 </div>
-
 
 
 <section class="ezy__footer dark py-12 bg-gray-800 text-white">
@@ -112,6 +121,63 @@
     }
   </script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>          
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>        
+    <button id="sosBtn" class="fixed bottom-10 right-10 bg-red-600 text-white p-6 rounded-full shadow-lg hover:bg-red-700 transition duration-300 hidden text-center">
+        SOS
+    </button>
+    
+    
+    <script>
+        // Get the SOS button and footer
+        const sosBtn = document.getElementById("sosBtn");
+        const footer = document.querySelector(".ezy__footer");
+    
+        // Add a scroll event listener to the window
+        window.addEventListener("scroll", () => {
+            const footerPosition = footer.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+    
+            // Check if the user has scrolled to the footer
+            if (footerPosition < screenHeight) {
+                // Show the SOS button when footer is in view
+                sosBtn.classList.add("show-sos");
+            } else {
+                // Hide the SOS button if not at the footer
+                sosBtn.classList.remove("show-sos");
+            }
+        });
+    </script>
+    <script>
+        document.getElementById('sosBtn').addEventListener('click', function() {
+            // Create a prompt with options for SOS services
+            const options = prompt("Select SOS Service:\n1. Police\n2. Ambulance\n3. Fire Brigade", "Enter the number (1, 2, or 3)");
+            
+            // If the user cancels the prompt, options will be null
+            if (options !== null) {
+                let service = "";
+                
+                // Determine which service was selected
+                switch (options) {
+                    case "1":
+                        service = "Police";
+                        break;
+                    case "2":
+                        service = "Ambulance";
+                        break;
+                    case "3":
+                        service = "Fire Brigade";
+                        break;
+                    default:
+                        alert("Invalid option selected!");
+                        return;
+                }
+                
+                // Show confirmation box
+                alert(`SOS request has been sent to the ${service}.`);
+            }
+        });
+    </script>
+    
+      
 </body>
 </html>

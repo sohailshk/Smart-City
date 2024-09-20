@@ -15,7 +15,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="./dist/css/style.css" rel="stylesheet"/>
     </head>
+<style>
+    /* Chatbot Container Styling */
+#chatbot-container {
+  height: ;
+  position: fixed;
+  bottom: 9rem;
+  right: 3rem;
+  background-color: black; /* Black background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 9999;
+}
 
+/* Chatbot iframe Styling */
+#chatbot-container iframe {
+  border: none;
+  background-color: white; /* White background for the chatbot */
+}
+</style>
 <body>
     <div class="ezy__nav2 dark py-6 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative">
   <nav>
@@ -30,17 +49,17 @@
         <ul class="flex flex-col lg:flex-row justify-center items-center text-3xl gap-6 lg:text-base lg:gap-2 absolute h-screen w-screen top-0 left-full lg:left-0 lg:relative lg:h-auto lg:w-auto bg-white dark:bg-[#0b1727] lg:bg-transparent" id="navbar"
         >
           <li class="">
-            <a class="px-4 opacity-50" href="index.html">Home</a>
+            <a class="px-4 opacity-50 hover:opacity-100"  href="index.html">Home</a>
           </li>
           <li class="">
-            <a class="px-4 opacity-100 hover:opacity-100" href="services.html">Services</a
+            <a class="px-4 opacity-50 hover:opacity-100" href="services.html">Services</a
             >
           </li>
           <li class="">
             <a class="px-4 opacity-50 hover:opacity-100" href="news.html">News/Events</a>
           </li>
           <li class="">
-            <a class="px-4 opacity-50 hover:opacity-100" href="contact.html">Contact Us</a>
+            <a class="px-4 opacity-100 hover:opacity-100" href="contact.html">Contact Us</a>
           </li>
           <li class="">
             <a class="px-4 opacity-50 hover:opacity-100" href="maps.html">Maps🌏</a>
@@ -58,32 +77,37 @@
     </div>
   </nav>
 </div>
+<div id="chatbot-container">
+    <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/dda27df6-d4ef-4239-8c6f-857ee3cc0e0b"></iframe></div>
+  
 
     <!-- Feedback Form Section -->
-    <section class="py-12 bg-gray-100">
-        <div class="container px-4">
-            <h2 class="text-2xl font-bold mb-4 text-center">Report an Issue or Provide Feedback</h2>
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your Feedback or Issue" rows="4"></textarea>
-                </div>
-                <div class="flex items-center justify-between">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                        Submit
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
+    <!-- Feedback Form Section -->
+<section class="py-12 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
+    <div class="container px-4 w-[40vw]">
+        <h2 class="text-2xl font-bold mb-4 text-center">Report an Issue or Provide Feedback</h2>
+        <form class="bg-white dark:bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 border-blue-600 border-2">
+            <div class="mb-4">
+                <label class="block text-gray-700 dark:text-white text-sm font-bold mb-2" for="name">Name</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white dark:bg-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 dark:text-white text-sm font-bold mb-2" for="email">Email</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white dark:bg-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 dark:text-white text-sm font-bold mb-2" for="message">Message</label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white dark:bg-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your Feedback or Issue" rows="4"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
 
 
 
