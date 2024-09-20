@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="rgb(0 122 255)">
+    <link rel="manifest" href="./manifest.json">
+            <title>Website ka naam</title>
+        <link rel="icon" href="./favicon.ico">
+        <link rel="apple-touch-icon" href="./logo192.png">
+                    <meta name="description" content="Template Tailwind CSS - 02 cloned" />
+            <meta name="keywords" content="" />            
+            <link href="./dist/css/tailwind.min.css" rel="stylesheet"> 
+            <link href="./dist/css/fontawesome-all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="./dist/css/style.css" rel="stylesheet"/>
+    </head>
+
+<body>
+    <div class="ezy__nav2 dark py-6 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative">
+  <nav>
+    <div class="container px-4">
+      <div class="flex justify-between items-center">
+        <a class="font-black text-3xl" href="#"> Citizen Link </a>
+        <button class="block lg:hidden cursor-pointer h-10 z-20" type="button" id="hamburger">
+          <div class="h-0.5 w-7 bg-black dark:bg-white -translate-y-2"></div>
+          <div class="h-0.5 w-7 bg-black dark:bg-white"></div>
+          <div class="h-0.5 w-7 bg-black dark:bg-white translate-y-2"></div>
+        </button>
+        <ul class="flex flex-col lg:flex-row justify-center items-center text-3xl gap-6 lg:text-base lg:gap-2 absolute h-screen w-screen top-0 left-full lg:left-0 lg:relative lg:h-auto lg:w-auto bg-white dark:bg-[#0b1727] lg:bg-transparent" id="navbar"
+        >
+          <li class="">
+            <a class="px-4 opacity-100" href="index.html">Home</a>
+          </li>
+          <li class="">
+            <a class="px-4 opacity-50 hover:opacity-100" href="services.html">Services</a
+            >
+          </li>
+          <li class="">
+            <a class="px-4 opacity-50 hover:opacity-100" href="news.html">News/Events</a>
+          </li>
+          <li class="">
+            <a class="px-4 opacity-50 hover:opacity-100" href="contact.html">Contact Us</a>
+          </li>
+          <li class="">
+            <a class="px-4 opacity-50 hover:opacity-100" href="maps.html">Maps🌏</a>
+          </li>
+          <li>
+            <button class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-1.5 px-4 rounded">Sign Up
+            </button>
+          </li>
+          <li>
+            <button
+              class="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded">Log In</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<section class="ezy__header22 dark pt-24 md:pt-44 bg-white dark:bg-[#0b1727] text-indigo-900 dark:text-white relative">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="../assets/bg video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute inset-0 bg-black opacity-50 z-1"></div>
+
+  <div class="container px-4 mx-auto relative z-10">
+    <div class="grid grid-cols-12 gap-y-6 lg:gap-x-6">
+      <div class="col-span-12 lg:col-span-6 xl:pr-12 text-center lg:text-start">
+        <div class="pb-14 lg:pb-32">
+          <h2 class="text-3xl md:text-[70px] md:leading-[85px] font-bold mb-4 text-white text-shadow">
+            Transforming Cities into Smart Ecosystems
+          </h2>
+          <p class="text-[22px] leading-normal opacity-80 text-white text-shadow">
+            Explore our platform to access city services, local news, community events, and more, all at your fingertips.          </p>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ezy__service22 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative z-[1]">
+  <div class="absolute bottom-0 left-0 right-0 h-1/2 w-full bg-blue-600 bg-opacity-30 -z-[1]"></div>
+  
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-col md:flex-row gap-6 justify-between">
+      <div class="max-w-xl">
+        <h2 class="text-3xl md:text-[45px] font-bold mb-6">Our Services</h2>
+        <p class="text-lg opacity-80">
+          We provide essential services designed to enhance the quality of life for all citizens.
+        </p>
+      </div>
+      <div class="flex items-center md:justify-end">
+        <button class="py-3 px-7 rounded bg-blue-600 hover:bg-opacity-90 text-white duration-300">See All</button>
+      </div>
+    </div>
+    <div class="grid grid-cols-6 gap-6 max-w-7xl mx-auto mt-12">
+      <!-- Transportation Service Card -->
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-bus"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Transportation</h4>
+            <p class="opacity-70 leading-[1.8]">
+              Reliable transportation solutions that ensure safe and efficient travel across the city.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Health Service Card -->
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Health</h4>
+            <p class="opacity-70 leading-[1.8]">
+              Comprehensive health services to promote well-being and ensure access to quality care.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Service Card -->
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-book"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Education</h4>
+            <p class="opacity-70 leading-[1.8]">
+              Educational programs and resources aimed at fostering learning and personal growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ezy__featured46 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative overflow-hidden z-10">
+  <div class="container px-4 mx-auto">
+    <div class="flex max-w-5xl justify-center text-center mx-auto md:mb-6">
+      <div>
+        <h2 class="text-3xl font-bold leading-tight md:text-[45px] mb-4">
+          Events and Alerts Across Mumbai
+        </h2>
+        <p class="text-lg opacity-80 leading-7">
+          Stay informed about the latest happenings in Mumbai! From exciting events to important alerts, we've got you covered.
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-12 pt-12">
+      <div class="col-span-12 lg:col-span-4 lg:order-2">
+        <div class="bg-center bg-no-repeat bg-cover rounded-2xl h-full min-h-[200px]"
+             style="background-image: url(https://static.vecteezy.com/system/resources/previews/036/224/667/original/mumbai-texture-map-on-white-background-vector.jpg);">
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-6 lg:col-span-4">
+        <div class="p-4 mt-4 lg:mt-0">
+          <div class="text-center p-6">
+            <div class="w-16 h-16 rounded-xl text-2xl inline-flex items-center justify-center bg-blue-600 text-white mb-6">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h4 class="text-2xl font-medium mb-4">Upcoming Events</h4>
+            <p class="opacity-80">
+              Join us for various cultural, sports, and entertainment events happening across the city. Check the map for details!
+            </p>
+          </div>
+        </div>
+        <div class="p-4 mt-4 lg:mt-0">
+          <div class="text-center p-6">
+            <div class="w-16 h-16 rounded-xl text-2xl inline-flex items-center justify-center bg-blue-600 text-white mb-6">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h4 class="text-2xl font-medium mb-4">Important Alerts</h4>
+            <p class="opacity-80">
+              Stay updated with critical alerts regarding weather changes, traffic updates, and safety information in your area.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-6 lg:col-span-4 lg:order-3">
+        <div class="p-4 mt-4 lg:mt-0">
+          <div class="text-center p-6">
+            <div class="w-16 h-16 rounded-xl text-2xl inline-flex items-center justify-center bg-blue-600 text-white mb-6">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <h4 class="text-2xl font-medium mb-4">Latest News</h4>
+            <p class="opacity-80">
+              Catch up on the latest news articles covering important stories, developments, and happenings in Mumbai.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 mt-4 lg:mt-0">
+          <div class="text-center p-6">
+            <div class="w-16 h-16 rounded-xl text-2xl inline-flex items-center justify-center bg-blue-600 text-white mb-6">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h4 class="text-2xl font-medium mb-4">Community Alerts</h4>
+            <p class="opacity-80">
+              Engage with your community! Get notified about local gatherings, safety updates, and more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ezy__clients8 dark py-14 md:py-24 bg-white dark:bg-[#0b1727] dark:text-white">
+  <div class="container px-16 md:px-8 lg:px-28">
+    <div class="grid grid-cols-12 justify-center mb-16">
+      <div class="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
+        <h2 class="font-bold text-[25px] lg:text-[35px] leading-none mb-6">Meet Our Clients & Partners</h2>
+        <p class="text-lg leading-6 opacity-70">
+          Collaborating with leading organizations to create smarter, more sustainable cities.
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-12 gap-6 justify-center text-center">
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="https://w7.pngwing.com/pngs/575/503/png-transparent-government-of-india-state-emblem-of-india-ministry-of-agriculture-farmers-welfare-india.png" alt="Government of India" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">Government of India</p>
+          <p class="text-sm opacity-80">Policy and funding support for smart city initiatives.</p>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="https://companieslogo.com/img/orig/TCS.NS-7401f1bd.png?t=1720244494" alt="TCS" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">Tata Consultancy Services</p>
+          <p class="text-sm opacity-80">Leading IT services provider for smart solutions.</p>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="https://logos-world.net/wp-content/uploads/2020/06/Accenture-Emblem.png" alt="Accenture" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">Accenture</p>
+          <p class="text-sm opacity-80">Consulting and technology services for urban development.</p>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvu8_5EYQj7HYlKrkb8ZBnBHJ7UNvhb7o2oQ&s" alt="Cisco" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">Cisco Systems</p>
+          <p class="text-sm opacity-80">Networking solutions for smart infrastructure.</p>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS0-3fkAk1LCQmFpRaMN5-z3EvDnDgu9a4XQ&s" alt="Siemens" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">Siemens</p>
+          <p class="text-sm opacity-80">Smart building and infrastructure solutions.</p>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="data:image/png;base64,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" alt="IBM" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">IBM</p>
+          <p class="text-sm opacity-80">Data analytics and AI for urban planning.</p>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="https://nds-association.org/wp-content/uploads/2020/08/hitachi-logo.jpg" alt="Hitachi" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">Hitachi</p>
+          <p class="text-sm opacity-80">Smart transportation and energy solutions.</p>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-100 dark:bg-[#1E2735] rounded-lg h-full grid place-items-center p-4 lg:p-12">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_KdnqkqBUq2Wks9x2O3voHucmaDgB9kLcMw&s" alt="Capgemini" class="max-h-[50px] h-auto max-w-full" />
+          <p class="mt-2 font-semibold">Capgemini</p>
+          <p class="text-sm opacity-80">Consulting and technology services for smart cities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ezy__testimonial13 light relative py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white z-[1]">
+  <div class="container px-4 mx-auto">
+    <div class="flex justify-center text-center mb-6 lg:mb-12">
+      <div class="max-w-md">
+        <h2 class="text-3xl leading-none md:text-[45px] font-bold mb-6">Community Reviews</h2>
+        <p>Our users share their experiences with our smart city services and initiatives.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12">
+      <div class="col-span-12 lg:col-span-1"></div>
+      <div class="col-span-12 lg:col-span-5 text-center">
+        <img id="review-image" src="https://images.immediate.co.uk/production/volatile/sites/3/2019/04/avengers-7a8c8d9.jpg?quality=90&resize=980,654" alt="" class="max-w-full h-auto w-full rounded-2xl"/>
+      </div>
+    </div>
+    <div class="grid grid-cols-12">
+      <div class="col-span-12 lg:col-span-5"></div>
+      <div class="col-span-12 lg:col-span-6 xl:col-span-5">
+        <div class="bg-white shadow-xl dark:bg-slate-800 mt-4 lg:-mt-[50%] p-6 md:py-12" id="review-content">
+          <div class="md:px-6">
+            <h3 class="text-3xl font-medium mb-2" id="review-author">John Doe</h3>
+            <p class="mb-6" id="review-rating">
+              <span class="fas fa-star text-yellow-500"></span>
+              <span class="fas fa-star text-yellow-500"></span>
+              <span class="fas fa-star text-yellow-500"></span>
+              <span class="fas fa-star-half-alt text-yellow-500"></span>
+              <span class="fas fa-star text-yellow-200 dark:text-opacity-20"></span>
+            </p>
+            <p id="review-text">The smart city initiatives have greatly improved my quality of life. The ease of accessing services and information has made a significant difference.</p>
+          </div>
+          <div class="md:px-6 mt-12">
+            <button onclick="prevReview()" class="w-10 h-10 text-[12px] bg-transparent border border-slate-400 dark:border-slate-600 rounded-full inline-flex items-center justify-center duration-150 hover:bg-slate-400 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-200 mr-3">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="nextReview()" class="w-10 h-10 text-[12px] bg-transparent border border-slate-400 dark:border-slate-600 rounded-full inline-flex items-center justify-center duration-150 hover:bg-slate-400 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-200">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const reviews = [
+      {
+        author: "Mr America",
+        rating: 4.5,
+        text: "The smart city initiatives have greatly improved my quality of life. The ease of accessing services and information has made a significant difference.",
+        image: "https://images.immediate.co.uk/production/volatile/sites/3/2019/04/avengers-7a8c8d9.jpg?quality=90&resize=980,654"
+      },
+      {
+        author: "Sarah Smith",
+        rating: 5,
+        text: "I love the new smart traffic management system! It has reduced congestion and made commuting much more enjoyable.",
+        image: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_11.webp"
+      },
+      {
+        author: "Michael Johnson",
+        rating: 4,
+        text: "The community engagement platform is fantastic. It's great to see local issues being addressed so effectively.",
+        image: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_11.webp"
+      }
+    ];
+
+    let currentReviewIndex = 0;
+
+    function updateReview() {
+      const review = reviews[currentReviewIndex];
+      document.getElementById('review-author').innerText = review.author;
+      document.getElementById('review-text').innerText = review.text;
+      document.getElementById('review-image').src = review.image;
+      document.getElementById('review-rating').innerHTML = Array.from({ length: 5 }, (_, i) => {
+        return i < Math.floor(review.rating) ? '<span class="fas fa-star text-yellow-500"></span>' :
+               (i < review.rating ? '<span class="fas fa-star-half-alt text-yellow-500"></span>' : 
+                '<span class="fas fa-star text-yellow-200 dark:text-opacity-20"></span>');
+      }).join('');
+    }
+
+    function nextReview() {
+      currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+      updateReview();
+    }
+
+    function prevReview() {
+      currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+      updateReview();
+    }
+  </script>
+</section>
+
+<section class="ezy__blog1_QOHkpCMC py-14 md:py-24 text-stone-800 bg-white dark:bg-[#0b1727] dark:text-white overflow-hidden">
+  <div class="container px-8 md:px-24">
+    <div class="grid grid-cols-12 items-center">
+      <div class="col-span-12 lg:col-span-5 mb-6 lg:mb-0 px-4 lg:px-6">
+        <div class="lg:px-6">
+          <h2 class="font-bold text-[32px] lg:text-[45px] leading-tight mb-3">
+            Latest News from Mumbai's Smart City Initiatives
+          </h2>
+          <p class="text-lg leading-normal opacity-80 font-medium mb-12">
+            Stay updated with the latest developments in Mumbai's smart city projects, enhancing urban living through technology and innovation.
+          </p>
+          <a href="news.html" class="bg-blue-600 hover:bg-opacity-90 text-white font-bold border border-blue-600 dark:border-blue-600 py-3 px-7 rounded transition"
+            >All Posts</a>
+        </div>
+      </div>
+      <div class="col-span-12 lg:col-span-7 mt-6 lg:mt-0 h-full">
+        <div class="grid grid-cols-2">
+          <div class="col-span-2 md:col-span-1 mb-3 px-4">
+            <article class="rounded-lg bg-white dark:bg-[#1E2735] overflow-hidden shadow-lg dark:shadow-none pb-3">
+              <div class="flex flex-col justify-center">
+                <div class="relative">
+                  <img
+                    src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/04/06/668837-traffic-03.jpg"
+                    alt="Mumbai Smart Traffic Management"
+                    class="h-auto w-full"
+                  />
+                  <div class="absolute top-0 left-0 px-6 py-3 font-bold bg-white dark:bg-[#1E2735] text-xl leading-6 rounded-br-lg">
+                    20<br />Sep<br />2024
+                  </div>
+                </div>
+                <div class="p-3 md:p-6">
+                  <p class="mb-3">
+                    By
+                    <a href="" class="text-blue-600 hover:text-opacity-90">Ravi Kumar</a>
+                  </p>
+                  <h4 class="font-medium text-2xl leading-7 mb-4">
+                    Mumbai Launches Smart Traffic Management System
+                  </h4>
+                  <p class="opacity-60 mb-8">
+                    The new traffic management system aims to reduce congestion and improve travel times across the city.
+                  </p>
+                  <a href="" class="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white py-2 px-5 rounded transition">Read More</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-span-2 md:col-span-1 mb-3 px-4">
+            <article class="rounded-lg bg-white dark:bg-[#1E2735] overflow-hidden shadow-lg dark:shadow-none pb-3">
+              <div class="flex flex-col justify-center">
+                <div class="relative">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIF7lQsRjbLYBbX7PUK837V97V-dlQKK8bsA&s"
+                    alt="Community Engagement Platform"
+                    class="h-auto w-full"
+                  />
+                  <div class="absolute top-0 left-0 px-6 py-3 font-bold bg-white dark:bg-[#1E2735] text-xl leading-6 rounded-br-lg">
+                    18<br />Sep<br />2024
+                  </div>
+                </div>
+                <div class="p-3 md:p-6">
+                  <p class="mb-3">
+                    By
+                    <a href="" class="text-blue-600 hover:text-opacity-90">Priya Shah</a>
+                  </p>
+                  <h4 class="font-medium text-2xl leading-7 mb-4">
+                    New Platform Enhances Community Engagement
+                  </h4>
+                  <p class="opacity-60 mb-8">
+                    A new digital platform allows citizens to report issues and suggest improvements, fostering community involvement.
+                  </p>
+                  <a href="" class="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white py-2 px-5 rounded transition">Read More</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ezy__footer dark py-12 bg-gray-800 text-white">
+  <div class="container px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+          <img src="../assets/logoFooter.jpeg" alt="Smart City Logo" class="w-40 h-auto mb-6 md:mb-0" />
+          <p class="text-center mb-6 md:mb-0">© 2024 Smart City. All rights reserved.</p>
+          <ul class="flex gap-6 mb-6 md:mb-0">
+              <li>
+                  <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                  <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                  <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-pinterest"></i></a>
+              </li>
+              <li>
+                  <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+              </li>
+          </ul>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between mt-8 text-sm">
+          <ul class="flex gap-4">
+              <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+              <li><a href="#" class="hover:text-blue-400">Support</a></li>
+          </ul>
+          <p class="text-center md:text-right mt-4 md:mt-0">Designed with care by Smart City Team</p>
+      </div>
+  </div>
+</section>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+	<script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+        }
+      }
+    }
+  </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>          
+</body>
+</html>

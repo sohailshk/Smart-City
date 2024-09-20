@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website- City Services</title>
+
+     <!-- Require stylesheet load from local -->
+                <link href="./dist/css/tailwind.min.css" rel="stylesheet">
+       <link href="./dist/css/fontawesome-all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	
+    <link href="./dist/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="ezy__nav2 dark py-6 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative">
+        <nav>
+          <div class="container px-4">
+            <div class="flex justify-between items-center">
+              <a class="font-black text-3xl" href="#"> Smart City </a>
+              <button class="block lg:hidden cursor-pointer h-10 z-20" type="button" id="hamburger">
+                <div class="h-0.5 w-7 bg-black dark:bg-white -translate-y-2"></div>
+                <div class="h-0.5 w-7 bg-black dark:bg-white"></div>
+                <div class="h-0.5 w-7 bg-black dark:bg-white translate-y-2"></div>
+              </button>
+              <ul class="flex flex-col lg:flex-row justify-center items-center text-3xl gap-6 lg:text-base lg:gap-2 absolute h-screen w-screen top-0 left-full lg:left-0 lg:relative lg:h-auto lg:w-auto bg-white dark:bg-[#0b1727] lg:bg-transparent" id="navbar"
+              >
+                <li class="">
+                  <a class="px-4 opacity-50" href="index.html">Home</a>
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-100 hover:opacity-100" href="services.html">Services</a
+                  >
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-50 hover:opacity-100" href="news.html">News/Events</a>
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-50 hover:opacity-100" href="contact.html">Contact Us</a>
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-50 hover:opacity-100" href="maps.html">Maps🌏</a>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+
+  <!-- Our services -->
+  <section
+  class="ezy__service22 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative z-[1]"
+>
+  <div class="absolute bottom-0 left-0 right-0 h-1/2 w-full bg-blue-600 bg-opacity-30 -z-[1]"></div>
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-col md:flex-row gap-6 justify-between">
+      <div class="max-w-xl">
+        <h2 class="text-3xl md:text-[45px] font-bold mb-6">All Services</h2>
+        <p class="text-lg opacity-80">
+          Here you can navigate to all the services in the city
+        </p>
+      </div>
+     
+    </div>
+    <div class="grid grid-cols-6 gap-6 max-w-7xl mx-auto mt-12">
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Utilities</h4>
+            <p class="opacity-70 leading-[1.8]">
+                Manage your household expenses by conveniently paying your utility bills online. Ensure uninterrupted services by keeping your electricity, water, and gas accounts up to date.
+            </p>
+            <div class="flex ">
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Electricity')"
+                      class="bg-blue-600 rounded py-3 text-[10px] px-4 hover:bg-opacity-90 duration-300 text-white text-sm inline-flex mt-6 md:mt-12 mr-3"
+                      >Electricity</a
+                    >
+                  </div>
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Water')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white text-sm inline-flex mt-6 md:mt-12 mr-3"
+                      >Water</a
+                    >
+                  </div>
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Bills')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white text-sm inline-flex mt-6 md:mt-12"
+                      >Bills</a
+                    >
+                  </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-car"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Transportation</h4>
+            <p class="opacity-70 leading-[1.8]">
+                Public Transit Pass, Parking Permits
+                Easily access public transportation with our transit pass options or secure a parking permit for your vehicle. Enjoy hassle-free commuting and parking in your community.
+            </p>
+            <div class="flex ">
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Public Pass')"
+                      class="bg-blue-600 rounded py-3 text-[10px] px-4 hover:bg-opacity-90 duration-300 text-white text-sm inline-flex mt-6 md:mt-12 mr-3"
+                      >Public Pass</a
+                    >
+                  </div>
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Parking Permits')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white text-sm inline-flex mt-6 md:mt-12 mr-3"
+                      >Parking Permits</a
+                    >
+                  </div>
+               
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-school"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Education</h4>
+            <p class="opacity-70 leading-[1.8]">
+                Book a Seat, Access eBooks
+                Enhance your learning experience by booking a seat for library events or accessing a vast collection of eBooks. Enjoy the resources of our public libraries to support your educational journey.
+            </p>
+            <div class="flex ">
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Book a seat')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Book a seat</a
+                    >
+                  </div>
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Access ebooks')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Access ebooks</a
+                    >
+                  </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-plus"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Health Services</h4>
+            <p class="opacity-70 leading-[1.8]">
+                Clinic Appointments, Vaccinations, Emergency Services
+                Access essential health services, including scheduling clinic appointments, getting vaccinated, and emergency care. Prioritize your health and well-being with our comprehensive healthcare options.
+            </p>
+            <div class="flex">
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Emergency')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Emergency</a
+                    >
+                  </div>
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Appiontments')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Appiontments</a
+                    >
+                  </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-trash"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Waste Management</h4>
+            <p class="opacity-70 leading-[1.8]">
+                Garbage Collection Schedule, Recycling
+                Stay informed about your waste management services with our garbage collection schedule. Learn about recycling options to contribute to a cleaner, more sustainable environment.
+            </p>
+            <div class="flex">
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Garbage Collection')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Garbage Collection</a
+                    >
+                  </div>
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Recyling')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Recyling</a
+                    >
+                  </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+          <div class="p-6 md:p-12">
+            <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+              <i class="fas fa-pen"></i>
+            </div>
+            <h4 class="text-2xl mb-6 font-bold">Permits and Licences</h4>
+            <p class="opacity-70 leading-[1.8]">
+              Banking crises have developed many times throughout history when one or more risks have emerged for a
+              banking sector as a whole.
+            </p>
+            <div class="flex">
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Construction')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Construction</a
+                    >
+                  </div>
+                <div>
+                    <a
+                    href="javascript:void(0)" onclick="openModal('Business')"
+                      class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white  inline-flex mt-6 md:mt-12 mr-3"
+                      >Business</a
+                    >
+                  </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+            <div class="p-6 md:p-12">
+                <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+                    <i class="fas fa-shield-alt"></i> <!-- Icon for Public Safety -->
+                </div>
+                <h4 class="text-2xl mb-6 font-bold">Public Safety</h4>
+                <p class="opacity-70 leading-[1.8]">
+                    Ensure your community's safety by reporting crimes or requesting police assistance.
+                </p>
+                <div class="flex">
+                    <div>
+                        <a href="javascript:void(0)" onclick="openModal('ReportCrime')"
+                           class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white inline-flex mt-6 md:mt-12 mr-3">
+                           Report a Crime</a>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" onclick="openModal('RequestPolice')"
+                           class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white inline-flex mt-6 md:mt-12 mr-3">
+                           Request Police Assistance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+            <div class="p-6 md:p-12">
+                <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+                    <i class="fas fa-tree"></i> <!-- Icon for Parks and Recreation -->
+                </div>
+                <h4 class="text-2xl mb-6 font-bold">Parks and Recreation</h4>
+                <p class="opacity-70 leading-[1.8]">
+                    Enjoy community activities and facilities by booking sports and events.
+                </p>
+                <div class="flex">
+                    <div>
+                        <a href="javascript:void(0)" onclick="openModal('BookFacilities')"
+                           class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white inline-flex mt-6 md:mt-12 mr-3">
+                           Book Sports Facilities</a>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" onclick="openModal('RegisterClasses')"
+                           class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white inline-flex mt-6 md:mt-12 mr-3">
+                           Register for Classes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl h-full">
+            <div class="p-6 md:p-12">
+                <div class="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+                    <i class="fas fa-home"></i> <!-- Icon for Housing Services -->
+                </div>
+                <h4 class="text-2xl mb-6 font-bold">Housing Services</h4>
+                <p class="opacity-70 leading-[1.8]">
+                    Access essential housing services to ensure community well-being.
+                </p>
+                <div class="flex">
+                    <div>
+                        <a href="javascript:void(0)" onclick="openModal('AffordableHousing')"
+                           class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white inline-flex mt-6 md:mt-12 mr-3">
+                           Affordable Housing Applications</a>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" onclick="openModal('RentAssistance')"
+                           class="bg-blue-600 rounded py-3 text-sm px-4 hover:bg-opacity-90 duration-300 text-white inline-flex mt-6 md:mt-12 mr-3">
+                           Rent Assistance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+  </div>
+</section>
+
+<section class="ezy__footer dark py-12 bg-gray-800 text-white">
+    <div class="container px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <img src="https://assets.easyfrontend.com/images/logo/easy-frontend-logo.svg" alt="Smart City Logo" class="max-w-full h-auto mb-6 md:mb-0" />
+            <p class="text-center mb-6 md:mb-0">© 2024 Smart City. All rights reserved.</p>
+            <ul class="flex gap-6 mb-6 md:mb-0">
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-pinterest"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between mt-8 text-sm">
+            <ul class="flex gap-4">
+                <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-blue-400">Support</a></li>
+            </ul>
+            <p class="text-center md:text-right mt-4 md:mt-0">Designed with care by Smart City Team</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Modal -->
+<div id="serviceModal" class="fixed  inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+        <h3 id="serviceTitle" class="text-xl font-bold mb-4"></h3>
+        <form>
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                <input type="text" id="name" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+                <input type="email" id="email" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Request Details</label>
+                <textarea id="message" rows="4" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-500"></textarea>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded mr-2">Cancel</button>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function openModal(service) {
+        document.getElementById('serviceModal').classList.remove('hidden');
+        console.log("modal opened");
+        document.getElementById('serviceTitle').innerText = `Request ${service} Service`;
+    }
+
+    function closeModal() {
+        document.getElementById('serviceModal').classList.add('hidden');
+    }
+</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      container: {
+        center: true,
+      }
+    }
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
