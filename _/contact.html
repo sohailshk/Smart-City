@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="rgb(0 122 255)">
+    <link rel="manifest" href="./manifest.json">
+            <title>Website ka naam</title>
+        <link rel="icon" href="./favicon.ico">
+        <link rel="apple-touch-icon" href="./logo192.png">
+                    <meta name="description" content="Template Tailwind CSS - 02 cloned" />
+            <meta name="keywords" content="" />            
+            <link href="./dist/css/tailwind.min.css" rel="stylesheet"> 
+            <link href="./dist/css/fontawesome-all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="./dist/css/style.css" rel="stylesheet"/>
+    </head>
+
+<body>
+    <div class="ezy__nav2 dark py-6 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative">
+  <nav>
+    <div class="container px-4">
+      <div class="flex justify-between items-center">
+        <a class="font-black text-3xl" href="#"> Citizen Link </a>
+        <button class="block lg:hidden cursor-pointer h-10 z-20" type="button" id="hamburger">
+          <div class="h-0.5 w-7 bg-black dark:bg-white -translate-y-2"></div>
+          <div class="h-0.5 w-7 bg-black dark:bg-white"></div>
+          <div class="h-0.5 w-7 bg-black dark:bg-white translate-y-2"></div>
+        </button>
+        <ul class="flex flex-col lg:flex-row justify-center items-center text-3xl gap-6 lg:text-base lg:gap-2 absolute h-screen w-screen top-0 left-full lg:left-0 lg:relative lg:h-auto lg:w-auto bg-white dark:bg-[#0b1727] lg:bg-transparent" id="navbar"
+        >
+          <li class="">
+            <a class="px-4 opacity-50" href="index.html">Home</a>
+          </li>
+          <li class="">
+            <a class="px-4 opacity-100 hover:opacity-100" href="services.html">Services</a
+            >
+          </li>
+          <li class="">
+            <a class="px-4 opacity-50 hover:opacity-100" href="news.html">News/Events</a>
+          </li>
+          <li class="">
+            <a class="px-4 opacity-50 hover:opacity-100" href="contact.html">Contact Us</a>
+          </li>
+          <li class="">
+            <a class="px-4 opacity-50 hover:opacity-100" href="maps.html">Maps🌏</a>
+          </li>
+          <li>
+            <button class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-1.5 px-4 rounded">Sign Up
+            </button>
+          </li>
+          <li>
+            <button
+              class="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded">Log In</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+    <!-- Feedback Form Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Report an Issue or Provide Feedback</h2>
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your Feedback or Issue" rows="4"></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+<section class="ezy__footer dark py-12 bg-gray-800 text-white">
+    <div class="container px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <img src="../assets/logoFooter.jpeg" alt="Smart City Logo" class="max-w-full w-40 h-auto mb-6 md:mb-0" />
+            <p class="text-center mb-6 md:mb-0">© 2024 Citizen Link. All rights reserved.</p>
+            <ul class="flex gap-6 mb-6 md:mb-0">
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-pinterest"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between mt-8 text-sm">
+            <ul class="flex gap-4">
+                <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-blue-400">Support</a></li>
+            </ul>
+            <p class="text-center md:text-right mt-4 md:mt-0">Designed with care by Smart City Team</p>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+        }
+      }
+    }
+  </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>          
+</body>
+</html>

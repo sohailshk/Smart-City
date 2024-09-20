@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -14,57 +15,198 @@
             <link href="./dist/css/fontawesome-all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="./dist/css/style.css" rel="stylesheet"/>
-    </head>
 
-<body>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    body {
+            background-color: #0b1727; /* Dark background color */
+        }
+    @media (min-width: 768px) {
+      .article-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .hover-grow {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-grow:hover {
+      transform: scale(1.05);
+    }
+
+    /* Carousel styles */
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: start;
+      margin-right: 1rem;
+    }
+  </style>
+  </head>
+  <body>
     <div class="ezy__nav2 dark py-6 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white relative">
-  <nav>
-    <div class="container px-4">
-      <div class="flex justify-between items-center">
-        <a class="font-black text-3xl" href="#"> Smart City </a>
-        <button class="block lg:hidden cursor-pointer h-10 z-20" type="button" id="hamburger">
-          <div class="h-0.5 w-7 bg-black dark:bg-white -translate-y-2"></div>
-          <div class="h-0.5 w-7 bg-black dark:bg-white"></div>
-          <div class="h-0.5 w-7 bg-black dark:bg-white translate-y-2"></div>
-        </button>
-        <ul class="flex flex-col lg:flex-row justify-center items-center text-3xl gap-6 lg:text-base lg:gap-2 absolute h-screen w-screen top-0 left-full lg:left-0 lg:relative lg:h-auto lg:w-auto bg-white dark:bg-[#0b1727] lg:bg-transparent" id="navbar"
-        >
-          <li class="">
-            <a class="px-4 opacity-50" href="index.html">Home</a>
-          </li>
-          <li class="">
-            <a class="px-4 opacity-100 hover:opacity-100" href="services.html">Services</a
-            >
-          </li>
-          <li class="">
-            <a class="px-4 opacity-50 hover:opacity-100" href="news.html">News/Events</a>
-          </li>
-          <li class="">
-            <a class="px-4 opacity-50 hover:opacity-100" href="contact.html">Contact Us</a>
-          </li>
-          <li class="">
-            <a class="px-4 opacity-50 hover:opacity-100" href="maps.html">Maps🌏</a>
-          </li>
-          <li>
-            <button class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-1.5 px-4 rounded">Sign Up
-            </button>
-          </li>
-          <li>
-            <button
-              class="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded">Log In</button>
-          </li>
-        </ul>
+        <nav>
+          <div class="container px-4">
+            <div class="flex justify-between items-center">
+              <a class="font-black text-3xl" href="#"> Citizen Link </a>
+              <button class="block lg:hidden cursor-pointer h-10 z-20" type="button" id="hamburger">
+                <div class="h-0.5 w-7 bg-black dark:bg-white -translate-y-2"></div>
+                <div class="h-0.5 w-7 bg-black dark:bg-white"></div>
+                <div class="h-0.5 w-7 bg-black dark:bg-white translate-y-2"></div>
+              </button>
+              <ul class="flex flex-col lg:flex-row justify-center items-center text-3xl gap-6 lg:text-base lg:gap-2 absolute h-screen w-screen top-0 left-full lg:left-0 lg:relative lg:h-auto lg:w-auto bg-white dark:bg-[#0b1727] lg:bg-transparent" id="navbar"
+              >
+                <li class="">
+                  <a class="px-4 opacity-50" href="index.html">Home</a>
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-50 hover:opacity-100" href="services.html">Services</a
+                  >
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-100 hover:opacity-100" href="news.html">News/Events</a>
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-50 hover:opacity-100" href="contact.html">Contact Us</a>
+                </li>
+                <li class="">
+                  <a class="px-4 opacity-50 hover:opacity-100" href="maps.html">Maps🌏</a>
+                </li>
+                <li>
+                  <button class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-1.5 px-4 rounded">Sign Up
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded">Log In</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-    </div>
-  </nav>
-</div>
 
 
+  <div class="container mx-auto px-4 py-8">
+    <main class="article-grid">
+      <article>
+        <header class="mb-8 animate_animated animate_fadeIn">
+          <span class="text-sm font-semibold text-gray-500 uppercase">SOFTWARE</span>
+          <h1 class="text-3xl font-bold mt-2 mb-4 text-white">Running macOS and Windows 10 on the Same Computer</h1>
+          <div class="flex items-center text-sm text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span>September 7, 2024</span>
+            <span class="mx-2">•</span>
+            <span>100+ Comments</span>
+          </div>
+        </header>
 
-<section class="ezy__footer dark py-12 bg-gray-800 text-white">
+        <figure class="mb-8 animate_animated animatefadeIn animate_delay-1s">
+          <a href="https://example.com/article-link" target="_blank">
+            <img src="../main.jpeg" alt="Laptops showing macOS and Windows" class="w-full h-auto rounded-lg hover-grow">
+          </a>
+        </figure>
+
+        <div class="prose max-w-none animate_animated animatefadeIn animate_delay-2s">
+          <p class="text-white">People Tried Running MacOS and windows 10 on the same computer led to various Technical Issues which
+            further led to problem of Conflicts arising Among them! Watch out Our cover of it ...</p>
+          <!-- Add more paragraphs as needed -->
+        </div>
+      </article>
+
+      <aside>
+        <section class="mb-8 animate_animated animate_fadeInRight">
+          <h2 class="text-xl font-semibold mb-4 text-white">APPS</h2>
+          <div class="bg-white shadow rounded-lg overflow-hidden">
+            <iframe class="w-full h-auto" height="400"
+              src="https://www.youtube.com/embed/uuZle1TQs-I?si=RqqtD8Sl_v3B6W53" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                        picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+            <div class="p-4">
+              <h3 class="font-semibold mb-2">AAJ KI BADI KHABAR</h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-8 animate_animated animatefadeInRight animate_delay-1s">
+          <h2 class="text-xl font-semibold mb-4 text-white">GAMES</h2>
+          <div class="bg-white shadow rounded-lg p-4 hover-grow">
+            <h3 class="font-semibold mb-2">This Is a Giant Shipworm. You May Wish It Had Stayed in Its Tube.</h3>
+          </div>
+          <div class="bg-white shadow rounded-lg p-4 hover-grow">
+              <h3 class="font-semibold mb-2">Latest Red Redemption Video upload by  NBOLT Recieves 2 million views in 20 minutes.</h3>
+            </div>
+        </section>
+
+        <section class="animate_animated animatefadeInRight animate_delay-2s">
+          <h2 class="text-xl font-semibold mb-4 text-white">EDITOR'S PICK</h2>
+          <div class="space-y-4">
+            <div class="bg-white shadow rounded-lg p-4 hover-grow">
+              <h3 class="font-semibold mb-2">For Families of Teens at Microsoft Surface</h3>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 hover-grow">
+              <h3 class="font-semibold mb-2">Why Netflix shares are down 10%</h3>
+            </div>
+            
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <!-- Carousel Section -->
+    <section class="mt-12 animate_animated animatefadeIn animate_delay-3s">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-bold text-white">Editor's Pick</h2>
+        <a href="#" class="text-purple-600 hover:text-purple-800">View All →</a>
+      </div>
+      <div class="carousel">
+        <div class="carousel-item bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="../carousel1.jpeg" alt="Microsoft Surface" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <span class="text-xs font-semibold text-gray-500 uppercase">EDITORS PICK</span>
+            <h3 class="font-semibold mt-2">For Families of Teens at Microsoft Surface</h3>
+          </div>
+        </div>
+        <div class="carousel-item bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="../carousel2.png" alt="Netflix" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <span class="text-xs font-semibold text-gray-500 uppercase">EDITORS PICK</span>
+            <h3 class="font-semibold mt-2">Why Netflix shares are down 10%</h3>
+          </div>
+        </div>
+        <div class="carousel-item bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="../carousel3.png" alt="Twitter Bots" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <span class="text-xs font-semibold text-gray-500 uppercase">APPS</span>
+            <h3 class="font-semibold mt-2">6 Bots That Deliver Science and Serendipity on Twitter</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="ezy__footer dark py-12 bg-gray-800 text-white">
     <div class="container px-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
-            <img src="https://assets.easyfrontend.com/images/logo/easy-frontend-logo.svg" alt="Smart City Logo" class="max-w-full h-auto mb-6 md:mb-0" />
+            <img src="../assets/logoFooter.jpeg" alt="Smart City Logo" class="w-40 h-auto mb-6 md:mb-0" />
             <p class="text-center mb-6 md:mb-0">© 2024 Smart City. All rights reserved.</p>
             <ul class="flex gap-6 mb-6 md:mb-0">
                 <li>
@@ -105,4 +247,3 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>          
 </body>
 </html>
-
